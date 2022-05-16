@@ -1,0 +1,117 @@
+:root {
+    --border: 1px solid black;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+header {
+    height: 10%;
+    width: 100%;
+    outline: var(--border);
+}
+
+section {
+    flex: 2 10%;
+    min-height: 8%;
+    min-width: 120px;
+}
+
+main {
+    flex: 1 80%;
+    outline: var(--border);
+    max-height: 75%;
+    height: 100%;
+}
+
+footer {
+    height: 15%;
+    outline: var(--border);
+    width: 100%;
+}
+
+
+/* Settings */
+ul {
+    list-style: none;
+    display: flex;
+}
+
+/* Header */
+#header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+#header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+#header nav ul {
+    gap: 20px;
+}
+
+/* Section */
+#section {
+    display: flex;
+    align-items: center;
+    outline: var(--border);
+    text-align: center;
+}
+#section ul {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+    width: 100%;
+}
+#section ul li a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+}
+#section ul li:hover {
+    background-color: rgb(163, 154, 154);
+}
+
+/* Main */
+#main {
+    padding: 10px;
+    overflow: auto;
+}
+#main article {
+    margin: 50px 0;
+}
+#main article:first-of-type {
+    margin: 0px;
+}
+
+/* Footer */
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    #section ul {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
